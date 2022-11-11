@@ -23,6 +23,7 @@ searchInputletter=document.getElementById("search-inputletter"),
 row=document.getElementById("rowData"),
 searchWord,
 searchLetter,
+hiddenDiv=document.getElementById("hiddenDiv"),
 arr=[];
 
 
@@ -80,7 +81,8 @@ async function All(){
 
 
 searchIteam.addEventListener("click",function(){
-    row.innerHTML =""
+    row.innerHTML ="";
+    contactContainer.classList.replace("d-block","d-none");
     searchContainer.classList.replace("d-none","d-block");
     closebtn()
 })
@@ -205,6 +207,8 @@ function displayCategories(arr) {
 }
 categoryIteam.addEventListener("click",function(){
     row.innerHTML =""
+    contactContainer.classList.replace("d-block","d-none");
+    searchContainer.classList.replace("d-block","d-none");
     getCategories();
     closebtn()
 })
@@ -228,7 +232,9 @@ async function filterByCategory(category) {
 
 areaIteam.addEventListener("click",function(){
     row.innerHTML =""
-    getArea();
+    contactContainer.classList.replace("d-block","d-none");
+    searchContainer.classList.replace("d-block","d-none");
+     getArea();
     closebtn()
 })
 
@@ -265,7 +271,9 @@ async function filterByArea(area) {
 
 
 ingrdientsIteam.addEventListener("click",function(){
-    row.innerHTML =""
+    row.innerHTML ="";
+    contactContainer.classList.replace("d-block","d-none");
+    searchContainer.classList.replace("d-block","d-none");
     getIngredient();
     closebtn()
 })
@@ -306,7 +314,9 @@ async function getMainIngredient(mealName) {
 
 contactIteam.addEventListener("click",function(){
     row.innerHTML ="";
+    searchContainer.classList.replace("d-block","d-none");
     contactContainer.classList.replace("d-none","d-block");
+    
 
     closebtn()
 
