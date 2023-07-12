@@ -29,9 +29,11 @@ arr=[];
 
 
 $("document").ready(function(){
-$(".fa-spinner").fadeOut(1000,function(){
+$(".fa-spinner").fadeOut(2000,function(){
+    All();
 $(".loading-screen").remove();
 $("body").css("overflow", "visible")
+
 }
 )})
 
@@ -72,7 +74,6 @@ function closebtn(){
     }, 1500)
 };
 
-All();
 async function All(){
     let meals = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=`)
     meals = await meals.json()
